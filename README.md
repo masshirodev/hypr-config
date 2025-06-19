@@ -26,7 +26,7 @@ myconf/
 
 1. Clone this repository:
 ```bash
-git clone <your-repo-url> ~/.config/myconf
+git clone https://github.com/masshirodev/hypr-config ~/.config/myconf
 ```
 
 2. Create symlinks to the expected config locations:

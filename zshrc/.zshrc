@@ -1,1 +1,1 @@
-source ~/.config/myconf/zshrc/.zshrc
+source ~/.config/myconf/zshrc/.zshrc_imports
