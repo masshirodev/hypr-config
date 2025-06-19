@@ -1,0 +1,31 @@
+# ~/bin to path
+export PATH=$HOME/bin:$PATH
+export PATH=$PATH:/home/masshiro/.local/bin
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# cargo
+. "$HOME/.cargo/env"
+
+# dotnet
+export PATH="$HOME/.dotnet:$PATH"
+export PATH="$PATH:/home/masshiro/.dotnet/tools"
+
+# sdkman
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin

@@ -1,0 +1,9 @@
+# nvm
+nvm use v18.20.3 &>/dev/null
+
+# pyenv
+pyenv global 3.11.7 &>/dev/null
+eval "$(pyenv virtualenv-init -)"
+
+# direnv
+eval "$(direnv hook zsh)" &>/dev/null

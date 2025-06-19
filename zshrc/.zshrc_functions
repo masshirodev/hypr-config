@@ -1,0 +1,45 @@
+function ii() {
+  gio open "$@" &>/dev/null
+}
+
+function rn() {
+  for file in *$3*; do mv "$file" "${file/$1/$2}"; done
+}
+
+# bash function to open all files in directory and subdirectories and replace a string
+# example usage: rasid "oldstring" "newstring" "/path/to/directory"
+function rasid() {
+  if [ -z "$1" ]; then
+    echo "No arguments supplied"
+    return
+  fi
+
+  if [ -z "$2" ]; then
+    echo "No arguments supplied"
+    return
+  fi
+
+  if [ -z "$3" ]; then
+    echo "No arguments supplied"
+    return
+  fi
+
+  grep -rl "$1" $3 | xargs sed -i "s/$1/$2/g" 
+}
+
+function mermaid() {
+  mmdc -i "$1" -o "${1%.*}.svg"
+  ii "${1%.*}.svg"
+}
+
+function jelly() {
+   if sudo systemctl is-active --quiet jellyfin.service; then
+       sudo systemctl stop jellyfin.service
+       echo "Stopped Jellyfin"
+   else
+       sudo systemctl start jellyfin.service
+       echo "Started Jellyfin" 
+   fi
+   sleep 1
+   sudo systemctl status jellyfin.service
+}

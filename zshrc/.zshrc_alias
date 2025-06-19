@@ -1,0 +1,33 @@
+# Commons
+alias zshrc="lvim $v_zshrc"
+alias rc="lvim $v_zshrc"
+alias hyde="lvim $v_hyde"
+alias refreshenv="clear && source $v_zshrc_base && hyprctl reload >/dev/null"
+alias ls='exa --icons -l -s type --color always --all'
+alias ~="cd ~"
+alias rcp="rsync --progress"
+alias rmv="rsync --progress --remove-source-files"
+alias cat="bat"
+alias space="df -h"
+alias copy='xclip -selection clipboard <'
+alias mergejson='$v_scripts/merge_json.py'
+
+# Directories
+alias desktop="cd $v_desktop"
+alias downloads="cd $v_downloads"
+alias documents="cd $v_documents"
+alias lunarvim="cd $v_lunarvim"
+alias lunarconfig="cd $v_lunarconfig"
+alias projects="cd $v_projects"
+alias ssd="cd $v_ssd"
+alias hdd="cd $v_hdd"
+alias backup="cd $v_backup"
+alias wdocuments="cd $v_wdocuments"
+alias wdownloads="cd $v_wdownloads"
+alias wprojects="cd $v_wprojects"
+alias discordbot="cd $v_discordbot"
+alias anime="cd $v_anime"
+alias movies="cd $v_movies"
+
+# Files
+alias fstab="sudo vim $v_fstab"
