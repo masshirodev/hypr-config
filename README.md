@@ -10,12 +10,14 @@ This repository contains configuration files for:
 - **Dunst** - Lightweight notification daemon
 - **Zsh** - Shell configuration
 - **Scripts** - Custom utility scripts
+- **hyde-themes** - HyDE themes for Hyprland with my customizations
 
 ## Structure
 
 ```
 myconf/
 ├── dunst/          # Notification daemon configuration
+├── hyde-themes/    # HyDE themes for Hyprland
 ├── hypr/           # Hyprland compositor settings
 ├── waybar/         # Status bar configuration and modules
 ├── scripts/        # Custom utility scripts
@@ -35,12 +37,14 @@ git clone https://github.com/masshirodev/hypr-config ~/.config/myconf
 mv ~/.config/dunst ~/.config/dunst.bak
 mv ~/.config/hypr ~/.config/hypr.bak
 mv ~/.config/waybar ~/.config/waybar.bak
+mv ~/.config/hyde ~/.config/hyde.bak
 
 # Create symlinks
 ln -s ~/.config/myconf/dunst ~/.config/dunst
 rm -r ~/.config/hypr && ln -s ~/.config/myconf/hypr ~/.config/hypr
 ln -s ~/.config/myconf/waybar ~/.config/waybar
 ln -s ~/.config/myconf/zshrc ~/.zshrc
+ln -s ~/.config/myconf/hyde-themes ~/.config/hyde
 ```
 
 3. Make scripts executable:
@@ -81,6 +85,7 @@ chmod +x ~/.config/myconf/scripts/*
 - Dunst
 - Zsh
 - Python 3 (for scripts)
+- HyDE
 
 ## Customization
 
