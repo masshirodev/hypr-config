@@ -8,6 +8,7 @@ This repository contains configuration files for:
 - **Hyprland** - Dynamic tiling Wayland compositor
 - **Waybar** - Highly customizable status bar
 - **Dunst** - Lightweight notification daemon
+- **FastFetch** - Linux system information tool
 - **Zsh** - Shell configuration
 - **Scripts** - Custom utility scripts
 - **hyde-themes** - HyDE themes for Hyprland with my customizations
@@ -17,6 +18,7 @@ This repository contains configuration files for:
 ```
 myconf/
 ├── dunst/          # Notification daemon configuration
+├── fastfetch/      # FastFetch configuration for system information
 ├── hyde-themes/    # HyDE themes for Hyprland
 ├── hypr/           # Hyprland compositor settings
 ├── waybar/         # Status bar configuration and modules
@@ -38,6 +40,7 @@ mv ~/.config/dunst ~/.config/dunst.bak
 mv ~/.config/hypr ~/.config/hypr.bak
 mv ~/.config/waybar ~/.config/waybar.bak
 mv ~/.config/hyde ~/.config/hyde.bak
+mv ~/.config/fastfetch ~/.config/fastfetch.bak
 
 # Create symlinks
 ln -s ~/.config/myconf/dunst ~/.config/dunst
@@ -45,6 +48,7 @@ rm -r ~/.config/hypr && ln -s ~/.config/myconf/hypr ~/.config/hypr
 ln -s ~/.config/myconf/waybar ~/.config/waybar
 ln -s ~/.config/myconf/zshrc ~/.zshrc
 ln -s ~/.config/myconf/hyde-themes ~/.config/hyde
+ln -s ~/.config/myconf/fastfetch ~/.config/fastfetch
 ```
 
 3. Make scripts executable:
@@ -71,6 +75,9 @@ chmod +x ~/.config/myconf/scripts/*
 - Icon support with themed SVG icons
 - Volume-specific notification icons
 - Forced to primary monitor display
+
+### FastFetch
+- Custom configuration for system information display
 
 ### Scripts
 - `merge_json.py` - JSON configuration merger
